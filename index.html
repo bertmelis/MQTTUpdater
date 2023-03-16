@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MQTT Updater</title>
+  <meta name="description" content="Web interface to update devices over MQTT.">
+  <meta name="author" content="Bert Melis">
+
+  <meta property="og:title" content="MQTT Updater">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Web interface to update devices over MQTT.">
+  <!--
+  <meta property="og:url" content="https://server.local/mqttupdater">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  -->
+
+</head>
+
+<body>
+  <div>
+  <label for="firmwareInput">Select the firmware file</label>
+  <input name="firmwareInput" id="firmwareInput" type="file">    
+  <button id="uploadBtn">Update</button>
+  </div>
+
+  <label for="deviceList">Devices</label>
+  <select name="deviceList" id="deviceList">
+    <option value="none">Select device</option>
+  </select>
+
+  <div>
+  <code id="logger">
+  </code>
+  </div>
+
+  <script src="MQTT.js/mqtt.min.js"></script>
+  <script src="mybuffer.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
